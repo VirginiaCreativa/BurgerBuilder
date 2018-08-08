@@ -1,0 +1,4 @@
+{
+  "presets" : ["env", "es2015", "stage-2", "airbnb", "react"],
+  "plugins": ["syntax-dynamic-import", "syntax-class-properties", "transform-class-properties"]
+}
