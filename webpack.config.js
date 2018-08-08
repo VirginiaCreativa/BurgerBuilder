@@ -4,12 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production'
 
 module.exports = {
 	entry: {
 		index: './src/index.js',
-		app: './src/app.jsx',
+		app: './src/App.js',
 		imports: './src/scripts/imports.js'
 	},
 	watch: true,
@@ -65,7 +66,7 @@ module.exports = {
 							options: { 
 	        				modules: true,
 	        				minimize: true, 
-	        				localIdentName: '[name]__[local]___[hash:base64:5]'
+	        				localIdentName: '[name]_[local]_[hash:base64:5]'
 		        		}
 		        	},
 	        	]
@@ -80,7 +81,7 @@ module.exports = {
 			        		modules: true, 
 	                  sourceMap: true,
 	                  importLoaders: 2,
-	                  localIdentName: '[name]__[local]___[hash:base64:5]'
+	                  localIdentName: '[name]_[local]_[hash:base64:5]'
 		        		}
 		        	},
 		        	{
@@ -141,11 +142,12 @@ module.exports = {
 		]
 	},
 	plugins: [
+		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
 			template: __dirname + '/src/index.html',
 			filename: 'index.html',
 			inject: 'body',
-			title: 'WebPack Project Materialize',
+			title: 'Burger Build',
 			minify: {
 				collapseWhitespace: true
 			}
