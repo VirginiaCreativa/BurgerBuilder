@@ -1,113 +1,369 @@
 .BreadBottom {
-    height: 13%;
-    width: 80%;
-    background: linear-gradient(#F08E4A, #e27b36);
-    border-radius: 0 0 30px 30px;
-    box-shadow: inset -15px 0 #c15711;
-    margin: 2% auto;
+  height: 60px;
+  width: 400px;
+  background-color: #f2da9e;
+  border-radius: 10px 10px 30px 30px;
+  border: 6px solid #6b3452;
+  box-shadow: inset -15px -8px #eab473;
+  margin: 0 auto;
 }
 
 .BreadTop {
-    height: 20%;
-    width: 80%;
-    background: linear-gradient(#bc581e, #e27b36);
-    border-radius: 50% 50% 0 0;
-    box-shadow: inset -15px 0 #c15711;
-    margin: 2% auto;
-    position: relative;
+  height: 140px;
+  width: 400px;
+  background-color: #f2da9e;
+  border-radius: 100% 100% 20px 20px;
+  margin: 0 auto;
+  border: 8px solid #6b3452;
+  position: relative;
+  box-shadow: inset -14px 8px #eab473;
+  z-index: 10;
+}
+
+.contentAbsolute {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #e0c082;
+}
+
+.seedBase {
+  width: 25px;
+  height: 15px;
+  position: absolute;
+  background: #e0c082;
 }
 
 .Seeds1 {
-    width: 10%;
-    height: 15%;
-    position: absolute;
-    background-color: white;
-    left: 30%;
-    top: 50%;
-    border-radius: 40%;
-    transform: rotate(-20deg);
-    box-shadow: inset -2px -3px #c9c9c9;
+  @extend .seedBase;
+  left: 15%;
+  top: 68%;
+  border-radius: 100%;
+  transform: rotate(90deg);
+  &:after {
+    @extend .contentAbsolute;
+    left: -100%;
+    top: 260%;
+    border-radius: 100%;
+    transform: rotate(0deg);
+  }
+  &:before {
+    @extend .contentAbsolute;
+    left: -100%;
+    top: -260%;
+    border-radius: 100%;
+    transform: rotate(0deg);
+  }
 }
 
-.Seeds1:after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: white;
-    left: -170%;
+.Seeds2 {
+  @extend .seedBase;
+  left: 48%;
+  top: 40%;
+  border-radius: 100%;
+  transform: rotate(90deg);
+  &:after {
+    @extend .contentAbsolute;
+    left: -100%;
+    top: 260%;
+    border-radius: 100%;
+    transform: rotate(0deg);
+  }
+  &:before {
+    @extend .contentAbsolute;
+    left: -100%;
     top: -260%;
-    border-radius: 40%;
-    transform: rotate(60deg);
-    box-shadow: inset -1px 2px #c9c9c9;
+    border-radius: 100%;
+    transform: rotate(0deg);
   }
-  
-.Seeds1:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: white;
-    left: 180%;
-    top: -50%;
-    border-radius: 40%;
-    transform: rotate(60deg);
-    box-shadow: inset -1px -3px #c9c9c9;
-  }
+}
 
-  .Seeds2 {
-    width: 10%;
-    height: 15%;
-    position: absolute;
-    background-color: white;
-    left: 64%;
-    top: 50%;
-    border-radius: 40%;
-    transform: rotate(10deg);
-    box-shadow: inset -3px 0 #c9c9c9;
+.Seeds3 {
+  @extend .seedBase;
+  left: 80%;
+  top: 68%;
+  border-radius: 100%;
+  transform: rotate(90deg);
+  &:after {
+    @extend .contentAbsolute;
+    left: -100%;
+    top: 260%;
+    border-radius: 100%;
+    transform: rotate(0deg);
   }
-  
-  .Seeds2:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: white;
-    left: 150%;
-    top: -130%;
-    border-radius: 40%;
-    transform: rotate(90deg);
-    box-shadow: inset 1px 3px #c9c9c9;
+  &:before {
+    @extend .contentAbsolute;
+    left: -100%;
+    top: -260%;
+    border-radius: 100%;
+    transform: rotate(0deg);
   }
-  
+}
 
 .Meat {
-    width: 80%;
-    height: 8%;
-    background: linear-gradient(#7f3608, #702e05);
-    margin: 2% auto;
-    border-radius: 15px;
+  height: 50px;
+  width: 400px;
+  background: linear-gradient(#7f3608, #702e05);
+  margin: 0 auto;
+  border-radius: 40px;
+  position: relative;
+  &:after {
+    content: "";
+    height: 18px;
+    width: 50px;;
+    position: absolute;
+    background-color: #b85a59;
+    border-radius: 20px;
+    left: 20px;
+    top: 8px;
+  }
+  &:before {
+    content: "";
+    height: 18px;
+    width: 18px;;
+    position: absolute;
+    background-color: #b85a59;
+    border-radius: 100%;
+    left: 80px;
+    top: 8px;
+  }
 }
 
 .Cheese {
-    width: 90%;
-    height: 4.5%;
-    margin: 2% auto;
-    background: linear-gradient(#f4d004, #d6bb22);
-    border-radius: 20px;
+  height: 20px;
+  width: 380px;
+  margin: 0 auto;
+  background-color: #e8a140;
+  border-radius: 20px;
+  position: relative;
+  z-index: 4;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 230px;
+    top: 8px;
+    width: 0;
+    height: 0;
+    z-index: 888;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 40px solid #e8a140;
+  }
 }
 
 .Salad {
-    width: 85%;
-    height: 7%;
-    margin: 2% auto;
-    background: linear-gradient(#228c1d, #91ce50);
-    border-radius: 20px;
+  height: 26px;
+  width: 400px;
+  margin: 0 auto;
+  background-color: #adcd7b;
+  border-radius: 20px;
+  position: relative;
+  z-index: 6;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 8px;
+    width: 31px;
+    height: 30px;
+    background-color: #adcd7b;
+    border-radius: 40px;
+    box-shadow: 30px 0 0 0 #e8a140, 60px 0 0 0 #adcd7b, 90px 0 0 0 #e8a140, 120px 0 0 0 #adcd7b, 150px 0 0 0 #e8a140, 180px 0 0 0 #adcd7b, 210px 0 0 0 #e8a140, 240px 0 0 0 #adcd7b,  270px 0 0 0 #e8a140,  300px 0 0 0 #adcd7b,  330px 0 0 0 #e8a140, 360px 0 0 0 #adcd7b;
+  }
 }
 
 .Bacon {
-    width: 80%;
-    height: 3%;
-    background: linear-gradient(#bf3813, #c45e38);
-    margin: 2% auto;
+  height: 15px;
+  width: 400px;
+  border-radius: 20px;
+  background: linear-gradient(to right, #cc4033 0%,#cc4033 15%,#fffefe 15.1%,#fffefe 25%,#cc4033 25.1%,#cc4033 35%,#fffefe 35.1%,#fffefe 45%,#cc4033 45.1%,#cc4033 55%,#fffefe 55.1%,#fffefe 65%,#cc4033 65.1%,#cc4033 75%,#fffefe 75%,#fffefe 85%,#cc4033 85.1%,#cc4033 95%);
+  margin: 0 auto;
+}
+
+.Onion {
+  margin: 0 auto;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  left: 40px;
+  top: 76px;
+  border: 10px solid #fff;
+  box-shadow: 0 0 0 10px #ad42bc;
+  border-radius: 50%;
+  z-index: 8;
+}
+.TomatoBase {
+  margin: 0 auto;
+  width: 85px;
+  height: 85px;
+  position: absolute;
+  top: 80px;
+  background: #e57b4c;
+  border: 14px solid #e55a39;
+  border-radius: 100%;
+  z-index: 8;
+}
+
+.Tomatos {
+  .Tomato1 {
+    @extend .TomatoBase;
+    left: 130px;
+  }
+  .Tomato2 {
+    @extend .TomatoBase;
+    left: 260px;
+  }
+}
+
+.Ketchup {
+  height: 10px;
+  width: 380px;
+  margin: 0 auto;
+  border-radius: 20px 20px 0px 0px;
+  background-color: #e55a39;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #e57b4c;
+    box-shadow: 100px 0 0 0 #e57b4c, 102px 0 0 0 #e57b4c, 104px 0 0 0 #e57b4c, 106px 0 0 0 #e57b4c, 108px 0 0 0 #e57b4c, 110px 0 0 0 #e57b4c, 112px 0 0 0 #e57b4c, 114px 0 0 0 #e57b4c, 116px 0 0 0 #e57b4c, 118px 0 0 0 #e57b4c, 120px 0 0 0 #e57b4c, 122px 0 0 0 #e57b4c, 124px 0 0 0 #e57b4c, 126px 0 0 0 #e57b4c, 128px 0 0 0 #e57b4c, 130px 0 0 0 #e57b4c, 132px 0 0 0 #e57b4c, 134px 0 0 0 #e57b4c, 136px 0 0 0 #e57b4c, 138px 0 0 0 #e57b4c, 140px 0 0 0 #e57b4c, 142px 0 0 0 #e57b4c, 144px 0 0 0 #e57b4c, 146px 0 0 0 #e57b4c, 148px 0 0 0 #e57b4c, 150px 0 0 0 #e57b4c, 152px 0 0 0 #e57b4c, 154px 0 0 0 #e57b4c, 156px 0 0 0 #e57b4c, 158px 0 0 0 #e57b4c, 160px 0 0 0 #e57b4c, 162px 0 0 0 #e57b4c, 164px 0 0 0 #e57b4c, 166px 0 0 0 #e57b4c, 178px 0 0 0 #e57b4c;
+  }
+  .Drop1 {
+    position: relative;
+    height: 45px;
+    width: 22px;
+    top: 10px;
+    left: 18px;
+    background-color: #e55a39;
+    border-radius: 0 0 20px 20px;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 7px;
+      width: 4px;
+      height: 6px;
+      border-radius: 50%;
+      background: #e57b4c;
+      box-shadow: 0 12px 0 0 #e57b4c, 0 14px 0 0 #e57b4c, 0 16px 0 0 #e57b4c, 0 18px 0 0 #e57b4c, 0 20px 0 0 #e57b4c;
+    }
+  }
+  .Drop2 {
+    position: relative;
+    height: 38px;
+    width: 22px;
+    top: -35px;
+    left: 44px;
+    background-color: #e55a39;
+    border-radius: 0 0 20px 20px;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 5px;
+      width: 4px;
+      height: 6px;
+      border-radius: 50%;
+      background: #e57b4c;
+      box-shadow: 0 12px 0 0 #e57b4c, 0 14px 0 0 #e57b4c, 0 16px 0 0 #e57b4c, 0 18px 0 0 #e57b4c, 0 20px 0 0 #e57b4c;
+    }
+  }
+}
+.Mustard {
+  position: absolute;
+  z-index: 10;
+  top: 175px;
+  right: 68px;
+  .Drop1 {
+    position: relative;
+    height: 48px;
+    width: 22px;
+    top: -35px;
+    left: 44px;
+    background-color: #f7e15e;
+    border-radius: 0 0 20px 20px;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 5px;
+      width: 4px;
+      height: 6px;
+      border-radius: 50%;
+      background: #fdf4b9;
+      box-shadow: 0 12px 0 0 #fdf4b9, 0 14px 0 0 #fdf4b9, 0 16px 0 0 #fdf4b9, 0 18px 0 0 #fdf4b9, 0 20px 0 0 #fdf4b9;
+    }
+  }
+  .Drop2 {
+    position: relative;
+    height: 28px;
+    width: 22px;
+    top: -83px;
+    left: 20px;
+    background-color: #f7e15e;
+    border-radius: 0 0 20px 20px;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 5px;
+      width: 4px;
+      height: 6px;
+      border-radius: 50%;
+      background: #fdf4b9;
+      box-shadow: 0 4px 0 0 #fdf4b9, 0 6px 0 0 #fdf4b9;;
+    }
+  }
+}
+.Mayonnaise {
+  position: absolute;
+  z-index: 10;
+  top: 175px;
+  left: 68px;
+  .Drop1 {
+    position: relative;
+    height: 42px;
+    width: 22px;
+    top: -35px;
+    left: -50px;
+    background-color: #fdf4b9;
+    border-radius: 0 0 20px 20px;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 5px;
+      width: 4px;
+      height: 6px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 12px 0 0 #fff, 0 14px 0 0 #fff, 0 16px 0 0 #fff, 0 18px 0 0 #fff, 0 20px 0 0 #fff;
+    }
+  }
+  .Drop2 {
+    position: relative;
+    height: 24px;
+    width: 22px;
+     top: -77px;
+    left: 113px;
+    background-color: #fdf4b9;
+    border-radius: 0 0 20px 20px;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 5px;
+      width: 4px;
+      height: 6px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 4px 0 0 #fff, 0 6px 0 0 #fff,
+    }
+  }
 }

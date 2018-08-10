@@ -10,7 +10,7 @@
     "build": "webpack && yarn run prod",
     "dev": "webpack --mode='development' --progress --colors --watch",
     "prod": "webpack --mode='production' --progress --colors --watch",
-    "stylelint": "stylelint 'src/style/*.scss' --fix",
+    "stylelint": "stylelint 'src/style/*.scss, src/components/**/*.scss, src/components/**/**/*.scss' --fix",
     "lint": "eslint src 'src/**/*.jsx, src/*.jsx'  --fix"
   },
   "dependencies": {
@@ -74,7 +74,7 @@
     "sass-resources-loader": "^1.3.3",
     "standard": "^11.0.1",
     "style-loader": "^0.21.0",
-    "stylelint": "^^9.4.0",
+    "stylelint": "^8.0.0",
     "stylelint-config-lost": "^0.0.3",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-config-recommended-scss": "^3.2.0",

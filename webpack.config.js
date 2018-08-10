@@ -147,7 +147,7 @@ module.exports = {
 			template: __dirname + '/src/index.html',
 			filename: 'index.html',
 			inject: 'body',
-			title: 'Burger Build',
+			title: 'Burger Builder',
 			minify: {
 				collapseWhitespace: true
 			}
@@ -181,8 +181,12 @@ module.exports = {
 	        './**/*.html',
 	        './*.html',
 	        './**/*.js',
+	        './**/**/*.js',
+	        './**/**/**/*.js',
 	        './*.js',
 	        './**/*.scss',
+	        './**/**/*.scss',
+	        './**/**/**/*.scss',
 	        './*.scss',
 	        './**/*.css',
 	        './*.css'
