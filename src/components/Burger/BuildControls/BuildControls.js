@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./BuildControls.scss";
+import { Button } from "reactstrap";
 import BuildControl from "./BuildControl/BuildControl.js";
 
 const controls = [
@@ -30,6 +31,15 @@ const buildControls = props => (
       <p className={classes.titlePrice}>Current Price:</p>
       <p className={classes.responPrice}>$ {props.price.toFixed(1)}</p>
     </div>
+    <Button
+      color="success"
+      size="lg"
+      block
+      className={classes.BtnOrder}
+      disabled={!props.purchasable}
+    >
+      ORDER NOW
+    </Button>
   </div>
 );
 export default buildControls;

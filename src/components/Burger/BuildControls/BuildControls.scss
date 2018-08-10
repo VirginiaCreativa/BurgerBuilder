@@ -5,8 +5,8 @@
 	margin: 40px auto;
 }
 .totalPrice {
-	border-top: 1px solid #bdc3c7;
-	border-bottom: 1px solid #bdc3c7;
+	border-top: 1px dotted #eaeaea;
+	border-bottom: 1px dotted #eaeaea;
 	padding: 10px 0 ;
 	width: 100%;
 	margin-top: 10px;
@@ -15,7 +15,7 @@
 		margin-bottom: 0;
 	}
 	.titlePrice {
-		color: #34ace0;
+		color: #2980b9;
 		font-weight: 500;
 		margin-right: 10px;
 		position: relative;
@@ -27,4 +27,7 @@
 		padding: 6px;
 		border-radius: 4px
 	}
+}
+.BtnOrder {
+	margin: 10px 0;
 }
