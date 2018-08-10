@@ -9,6 +9,16 @@
 		margin: 0 10px;
 		cursor: pointer;
 		font-weight: 300;
+		&:disabled {
+			background-color: #95a5a6;
+			cursor: default;
+			color: #444;
+			&:hover {
+				background-color: #95a5a6;
+				color: #444;
+				cursor: not-allowed;
+			}
+		}
 	}
 	label {
 		text-align: left;
