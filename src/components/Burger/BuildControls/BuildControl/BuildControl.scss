@@ -1,0 +1,14 @@
+.CockpitControl {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 5px 0;
+	button {
+		.Less {
+			background-color: #2ecc71
+		}
+		.More {
+			background-color: #ff5253
+		}
+	}
+}
