@@ -26,6 +26,10 @@ const buildControls = props => (
         />
       );
     })}
+    <div className={classes.totalPrice}>
+      <p className={classes.titlePrice}>Current Price:</p>
+      <p className={classes.responPrice}>$ {props.price.toFixed(1)}</p>
+    </div>
   </div>
 );
 export default buildControls;
