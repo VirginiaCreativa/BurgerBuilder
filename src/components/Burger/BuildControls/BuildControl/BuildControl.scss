@@ -4,11 +4,27 @@
 	align-items: center;
 	margin: 5px 0;
 	button {
-		.Less {
-			background-color: #2ecc71
+		color: #fff;
+		border: none;
+		margin: 0 10px;
+		cursor: pointer;
+		font-weight: 300;
+	}
+	label {
+		text-align: left;
+		width: 90px;
+	}
+	.Less {
+		background-color: #ff5253;
+		&:hover {
+			background-color: #b33839;
 		}
-		.More {
-			background-color: #ff5253
+	}
+	.More {
+		background-color: #2ecc71;
+		&:hover {
+			background-color: #15a085;
 		}
 	}
 }
+
