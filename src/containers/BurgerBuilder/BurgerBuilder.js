@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import { Container, Row, Col } from "reactstrap";
 import Aux from "./../../Hoc/Aux.js";
 import Burger from "./../../components/Burger/Burger.js";
 import BuildControls from "./../../components/Burger/BuildControls/BuildControls.js";
-
+import Modal from "./../../components/UI/Modal/Modal.js";
+import OrderSummary from "./../../components/Burger/OrderSummary/OrderSummary.js";
 const INGREDIENT_PRICES = {
   bacon: 1.0,
   salad: 0.5,
@@ -80,16 +82,23 @@ class BurgerBuilder extends Component {
       disableInfo[key] = disableInfo[key] <= 0;
     }
     return (
-      <Aux>
-        <Burger ingredients={this.state.ingredients} />
-        <BuildControls
-          ingredientAdded={this.AddIngredientHandler}
-          ingredientRemoved={this.RemoveIngredientHandler}
-          disabled={disableInfo}
-          purchasable={this.state.purchasable}
-          price={this.state.totalPrice}
-        />
-      </Aux>
+      <div>
+        <Aux>
+          <Modal>
+            <OrderSummary ingredients={this.state.ingredients} />
+          </Modal>
+          <Container>
+            <Burger ingredients={this.state.ingredients} />
+            <BuildControls
+              ingredientAdded={this.AddIngredientHandler}
+              ingredientRemoved={this.RemoveIngredientHandler}
+              disabled={disableInfo}
+              purchasable={this.state.purchasable}
+              price={this.state.totalPrice}
+            />
+          </Container>
+        </Aux>
+      </div>
     );
   }
 }
