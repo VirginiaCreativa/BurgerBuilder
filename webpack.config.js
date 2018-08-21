@@ -116,23 +116,36 @@ module.exports = {
 	      ]
 			},
 			{
-				test: /\.(png|svg|jpe?g|gif|ico)$/,
+				test: /\.(png|jpe?g|gif|ico)$/,
 				use: [
 					{
 						loader: 'file-loader',
 						options: {
 							outputPath: 'assets/images',
-							name: '[sha512:hash:base64:10].[ext]'
+							name: '[sha512:hash:base64:10].[ext]',
+							context: './assets/images'
 						}
 					}
 				]
 			},
 			{
-				test: /\.(woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+				test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							outputPath: 'assets/images',
+							context: './assets/images'
+						}
+					}
+				]
+			},
+			{
+				test: /\.(woff|woff2|png|jpe?g|gif|ico|eot|ttf)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
 				loader: "url-loader?limit=80000"
 			},
       	{
-      		test: /\.(woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+      		test: /\.(woff|woff2|eot|ttf)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
       		loader: 'file-loader',
       		options: {
 					outputPath: 'assets/fonts/',
