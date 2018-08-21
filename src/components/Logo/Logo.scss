@@ -1,17 +1,16 @@
 .Logo {
-	height: 40px;
-	display: flex;
-	display: flex;
+  display: flex;
+  height: 40px;
   align-items: left;
   justify-content: left;
-
-	img {
-		height: 100%;
-		margin-right: 10px;
-	}
-	h4 {
-		margin-bottom: 0;
-		line-height: 1.8;
-		letter-spacing: -1px;
-	}
+  img {
+    height: 100%;
+    margin-right: 10px;
+  }
+  h4 {
+    margin-bottom: 0;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.8;
+  }
 }
