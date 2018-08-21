@@ -1,12 +1,13 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import classes from "./Toolbar.scss";
+import Logo from "./../../Logo/Logo.js";
 
+import classes from "./Toolbar.scss";
 const toolbar = props => (
   <header className={classes.Toolbar}>
     <Row>
       <Col>
-        <div className={classes.Logo}>Logo</div>
+        <Logo />
       </Col>
       <Col>
         <div className={classes.Nav}>
