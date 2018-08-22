@@ -1,19 +1,17 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import Logo from "./../../Logo/Logo.js";
-import Navigation from "./../../Navigation/NavigationItems/Navigationitems.js";
-
+import Navs from "./../Navs/Navs.js";
 import classes from "./Toolbar.scss";
+
 const toolbar = props => (
   <header className={classes.Toolbar}>
     <Row>
-      <Col md={9}>
+      <Col md={8}>
         <Logo />
       </Col>
-      <Col md={3}>
-        <nav>
-          <Navigation />
-        </nav>
+      <Col md={4}>
+        <Navs />
       </Col>
     </Row>
   </header>
