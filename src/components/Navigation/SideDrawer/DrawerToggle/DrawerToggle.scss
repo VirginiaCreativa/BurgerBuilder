@@ -1,0 +1,14 @@
+.DrawerToggle {
+		display: flex;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+		position: relative;
+  	top: 12px;
+	i {
+		cursor: pointer;
+  	&:hover {
+  		color: blue;
+  	}
+	}
+}

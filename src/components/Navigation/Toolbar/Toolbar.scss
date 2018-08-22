@@ -1,6 +1,15 @@
 .Toolbar {
   padding: 20px;
 	@media (min-width: 320px) and (max-width: 767.98px) {
-	  display: none !important;
+	  .Nav {
+			display: none;
+			
+	  }
 	}
+  .Menu {
+  	
+		@media (min-width: 768px){
+			display: none;
+		}
+  }
 }
