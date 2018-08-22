@@ -6,10 +6,12 @@ import Navs from "./../Navigation/Navs/Navs.js";
 const sideDrawer = props => {
   return (
     <div className={classes.SideDrawer}>
-      <Logo />
-      <nav>
+      <div className={classes.Logo}>
+        <Logo />
+      </div>
+      <div className={classes.Nav}>
         <Navs />
-      </nav>
+      </div>
     </div>
   );
 };

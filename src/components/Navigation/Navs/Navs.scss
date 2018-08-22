@@ -6,4 +6,10 @@
   flex-wrap: wrap;
   align-content: space-between;
   justify-content: flex-end;
+  flex-flow: row;
+  @media (min-width: 320px) and (max-width: 767.98px) {
+    justify-content: flex-start;
+    flex-flow: column !important;
+    align-content: flex-start;
+  }
 }
