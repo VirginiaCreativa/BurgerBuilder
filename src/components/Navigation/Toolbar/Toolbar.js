@@ -7,10 +7,10 @@ import classes from "./Toolbar.scss";
 const toolbar = props => (
   <header className={classes.Toolbar}>
     <Row>
-      <Col md={8}>
+      <Col md={9}>
         <Logo />
       </Col>
-      <Col md={4}>
+      <Col md={3}>
         <Navs />
       </Col>
     </Row>

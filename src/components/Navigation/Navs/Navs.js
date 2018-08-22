@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Navs.scss";
 import NavItem from "./NavItem/NavItem.js";
 const navs = props => (
-  <ul className={classes.Navs}>
+  <ul className={[classes.Navs, "list-unstyled"].join(" ")}>
     <NavItem link="/" active>
       Home
     </NavItem>
