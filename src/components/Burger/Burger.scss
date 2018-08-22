@@ -3,6 +3,9 @@
 	position: relative;
 	text-align: center;
 	margin: 0 auto;
+	@media (min-width: 320px) and (max-width: 767.98px) {
+    width: 300px;
+  }
 }
 .Warning {
 	background: linear-gradient(to top, #ff416c, #ff4b2b);

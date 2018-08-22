@@ -1,5 +1,6 @@
 import React from "react";
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient.js";
+import { Container, Row, Col } from "reactstrap";
 import classes from "./Burger.scss";
 
 const burger = props => {
@@ -20,13 +21,13 @@ const burger = props => {
   }
   console.log(transformIngredients);
   return (
-    <div>
+    <Container>
       <div className={classes.ContentBurger}>
         <BurgerIngredient type="bread-top" />
         {transformIngredients}
         <BurgerIngredient type="bread-bottom" />
       </div>
-    </div>
+    </Container>
   );
 };
 export default burger;
