@@ -1,13 +1,9 @@
 import React, { Component } from "react";
-import Aux from "./../../../Hoc/Aux.js";
+import Aux from "./../../../Hoc/Aux/Aux.js";
 import Button from "./../../UI/Button/Button.js";
 import classes from "./OrderSummary.scss";
 
 class OrderSummary extends Component {
-  componentWillUpdate() {
-    console.log("[OrderSummary] WillUpdate");
-  }
-
   render() {
     const ingredientSummary = Object.keys(this.props.ingredients).map(igKey => {
       return (

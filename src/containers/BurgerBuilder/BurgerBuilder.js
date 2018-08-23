@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
-import Aux from "./../../Hoc/Aux.js";
+import Aux from "./../../Hoc/Aux/Aux.js";
 import Burger from "./../../components/Burger/Burger.js";
 import BuildControls from "./../../components/Burger/BuildControls/BuildControls.js";
 import Modal from "./../../components/UI/Modal/Modal.js";
