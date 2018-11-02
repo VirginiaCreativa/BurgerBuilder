@@ -19,7 +19,6 @@ const burger = props => {
       <h2 className={classes.Warning}>Please start adding ingredients!</h2>
     );
   }
-  console.log(transformIngredients);
   return (
     <Container>
       <div className={classes.ContentBurger}>

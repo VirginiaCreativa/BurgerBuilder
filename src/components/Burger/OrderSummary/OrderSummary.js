@@ -4,6 +4,8 @@ import Button from "./../../UI/Button/Button.js";
 import classes from "./OrderSummary.scss";
 
 class OrderSummary extends Component {
+  state = {};
+
   render() {
     const ingredientSummary = Object.keys(this.props.ingredients).map(igKey => {
       return (
